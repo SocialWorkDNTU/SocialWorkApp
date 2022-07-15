@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="../css/student.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/home.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <div class="hamburger__inner">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="logo">
+                    TRANG MỤC
+                </div>
+                <div class="logo-title">
+                    TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐỒNG NAI
+                </div>
+                <div class="right_menu">
+                    <ul>
+                        <li><i class="fa fa-user-circle-o"></i>
+                            <a>Nguyễn Thị Liệu</a>
+                            <div class="profile_dd">
+                                <div class="dd_item">Thoát</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_container">
+            <div class="sidebar">
+                <div class="sidebar__inner">
+                    <ul>
+                        <li>
+                            <a href="/user" class="active">
+                                <span class="icon"><img src="../images/icons/ID-Card 1.png" alt=""></i></span>
+                                <span class="title">Thông tin cá nhân</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/post">
+                                <span class="icon"><img src="../images/icons/Post.png" alt=""></i></span>
+                                <span class="title">Đăng bài</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/management">
+                                <span class="icon"><img src="../images/icons/manage_post.png" alt=""></i></span>
+                                <span class="title">Quản lý bài viết</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/student" class="active-4">
+                                <span class="icon"><img src="../images/icons/sv_manage.png" alt=""></span>
+                                <span class="title">Quản lý sinh viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin">
+                                <span class="icon"><img src="../images/icons/administrators.png" alt=""></i></span>
+                                <span class="title">Quản trị viên</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <div class="btn-title-fix">
+                        <button class="btn-title" disabled>
+                            QUẢN LÝ SINH VIÊN
+                        </button>
+                    </div>
+                    <div class="form">
+                        <div class="form-search">
+                            <input type="text" id="input-search" class="input-search"
+                                placeholder="&#xF002;Tìm kiếm (Nhập MSSV hoặc Họ Tên)"
+                                style="font-family:Arial, FontAwesome">
+                            <button class="btn-search">
+                                <i class="fa fa-search"></i>Tìm kiếm
+                            </button>
+                        </div>
+                        <button id="btn-open" class="btn-add"><i class="fa fa-plus"></i> Thêm
+                            sinh
+                            viên</i>
+
+                        </button>
+                        <!-- Modal -->
+                        <div id="modal-container">
+                            <div id="modal">
+                                <div class="modal-header">
+                                    <button class="btn-title" disabled>
+                                        THÊM SINH VIÊN
+                                        <i id="btn-close" class="fa fa-close"></i>
+                                    </button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-register-account">
+                                        <p>
+                                            <label>Tài Khoản <i style="color:red">*</i></label>
+                                            <label class="label-password">Mật Khẩu <i style="color:red">*</i></label>
+                                        </p>
+                                        <p>
+                                            <input type="text" class="input-account" required>
+
+                                            <input type="password" class="input-password" required>
+                                        </p>
+                                        <p>
+                                            <hr />
+                                        </p>
+                                        <p>
+                                            <label class="label-left">Họ và Tên</label>
+                                            <label class="label-gender">Giới Tính</label>
+                                        </p>
+                                        <p>
+                                            <input type="text" id="input-name" value="Nguyễn Văn AAAAA" required>
+
+                                            <input type="boolean" id="input-gender" value="Nam" class="input-right"
+                                                required>
+                                        </p>
+                                        <p>
+                                            <label class="label-left">MSSV</label>
+                                            <label class="label-date">Ngày sinh</label>
+                                        </p>
+                                        <p>
+                                            <input type="text" id="input-mssv" value="141802055" required>
+
+                                            <input type="date" id="input-birthday" value="11/08/2000"
+                                                class="input-right" required>
+                                        </p>
+                                        <p>
+                                            <label class="label-left">Lớp</label>
+                                            <label class="label-address">Địa chỉ</label>
+                                        </p>
+                                        <p>
+                                            <input type="text" id="input-class" value="ĐHCNTT14F" required>
+
+                                            <input type="text" id="input-address" value="nqjwèhqưièhuqưehfuiqưè"
+                                                class="input-right">
+                                        </p>
+                                        <p>
+                                            <label class="label-left">Ngành</label>
+                                            <label class="label-phone">Số điện thoại</label>
+                                        </p>
+                                        <p>
+                                            <input type="text" id="input-major" value="Công nghệ thông tin" required>
+
+                                            <input type="text" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="10"
+                                                id="input-phone" value="090123456789" class="input-right">
+                                        </p>
+                                        <p>
+                                            <label class="label-left">Khóa</label>
+                                            <label class="label-right"></label>
+                                        </p>
+                                        <p>
+                                            <input type="text" id="input-stage" value="2015 - 2019" required>
+
+                                            <button id="btn-submit" class="btn-submit">THÊM</button>
+                                        </p>
+                                    </form>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <!-- Modal End -->
+                    </div>
+                    <table class="table-post">
+                        <tr>
+                            <th>
+                                MSSV
+                            </th>
+                            <th>
+                                Lớp
+                            </th>
+                            <th>
+                                Họ và Tên
+                            </th>
+                            <th>
+                                Điểm CTXH
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                141802055
+                            </td>
+                            <td>
+                                DHCNTT14F
+                            </td>
+                            <td>
+                                Nguyễn Văn AAAA
+                            </td>
+                            <td>
+                                10
+                            </td>
+                            <td>
+                                <button class="btn-view"><a href="/info">
+                                        Xem
+                                    </a>
+                                </button>
+                                <button class="btn-lock">
+                                    Khóa
+                                </button>
+                                <button class="btn-del">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                141802055
+                            </td>
+                            <td>
+                                DHCNTT14F
+                            </td>
+                            <td>
+                                Nguyễn Văn AAAA
+                            </td>
+                            <td>10</td>
+                            <td>
+                                <button class="btn-view">
+                                    Xem
+                                </button>
+                                <button class="btn-lock">
+                                    Khóa
+                                </button>
+                                <button class="btn-del">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                141802055
+                            </td>
+                            <td>
+                                DHCNTT14F
+                            </td>
+                            <td>
+                                Nguyễn Văn AAAA
+                            </td>
+                            <td>10</td>
+                            <td>
+                                <button class="btn-view">
+                                    Xem
+                                </button>
+                                <button class="btn-lock">
+                                    Khóa
+                                </button>
+                                <button class="btn-del">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                141802055
+                            </td>
+                            <td>
+                                DHCNTT14F
+                            </td>
+                            <td>
+                                Nguyễn Văn AAAA
+                            </td>
+                            <td>
+                                10
+                            </td>
+                            <td>
+                                <button class="btn-view">
+                                    Xem
+                                </button>
+                                <button class="btn-lock">
+                                    Khóa
+                                </button>
+                                <button class="btn-del">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <footer class=" text-center text-lg-start">
+                    <!-- Copyright -->
+                    <div class="text-center text-white p-3">
+                        © 2022 Copyright:
+                        <a class="text-white">TiDi</a>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const btn_open = document.getElementById('btn-open');
+        const btn_close = document.getElementById('btn-close');
+        const modal_container = document.getElementById('modal-container');
+        btn_open.addEventListener('click', () => {
+            //Add class .show
+            modal_container.classList.add('show')
+        })
+        btn_close.addEventListener('click', () => {
+            //Add class .show
+            modal_container.classList.remove('show')
+        })
+    </script>
+</body>
+
+</html>

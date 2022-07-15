@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin cá nhân</title>
+    <link rel="stylesheet" href="../css/user.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/home.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <div class="hamburger__inner">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="logo">
+                    TRANG MỤC
+                </div>
+                <div class="logo-title">
+                    TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐỒNG NAI
+                </div>
+                <div class="right_menu">
+                    <ul>
+                        <li><i class="fa fa-user-circle-o"></i>
+                            <a>Nguyễn Thị Liệu</a>
+                            <div class="profile_dd">
+                                <div class="dd_item">Thoát</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_container">
+            <div class="sidebar">
+                <div class="sidebar__inner">
+                    <ul>
+                        <li>
+                            <a href="/user" class="active">
+                                <span class="icon"><img src="../images/icons/ID-Card 1.png" alt=""></i></span>
+                                <span class="title">Thông tin cá nhân</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/post">
+                                <span class="icon"><img src="../images/icons/Post.png" alt=""></i></span>
+                                <span class="title">Đăng bài</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/management">
+                                <span class="icon"><img src="../images/icons/manage_post.png" alt=""></i></span>
+                                <span class="title">Quản lý bài viết</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/student">
+                                <span class="icon"><img src="../images/icons/sv_manage.png" alt=""></span>
+                                <span class="title">Quản lý sinh viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin">
+                                <span class="icon"><img src="../images/icons/administrators.png" alt=""></i></span>
+                                <span class="title">Quản trị viên</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <form class="form" method="post" action="./index.html">
+                        <div class="btn-title-fix">
+                            <button class="btn-title" disabled>
+                                THÔNG TIN CÁ NHÂN
+                            </button>
+                        </div>
+                        <div class="input_category mt-3 ml-3">
+                            <img src="../images/icons/name.png" alt="">
+                            <span>
+                                Họ và tên:
+                            </span>
+                            <input type="text" id="input_name" class="form-control" value=" Nguyễn Thị Liệu">
+                        </div>
+                        <div class="input_category mt-3 ml-3">
+                            <img src="../images/icons/callphone.png" alt="">
+                            <span>
+                                SĐT:
+                            </span>
+                            <input type="text" id="input_phone" class="form-control" value=" 090123456789">
+                        </div>
+                        <div class="input_category mt-3 ml-3">
+                            <img src="../images/icons/diachi.png" alt="">
+                            <span>
+                                Địa chỉ:
+                            </span>
+                            <input type="text" id="input_address" class="form-control" value=" 123123sđ BBB CCC">
+                        </div>
+                        <div class="input_category mt-3 ml-3">
+                            <img src="../images/icons/gender.png" alt="">
+                            <span>
+                                Giới tính:
+                            </span>
+                            <input type="text" id="input_gender" class="form-control" value=" Nữ">
+                        </div>
+                        <div class="input_category mt-3 ml-3">
+                            <img src="../images/icons/mail.png" alt="">
+                            <span>
+                                Email:
+                            </span>
+                            <input type="text" id="input_mail" class="form-control" value=" asfjo2hr1@gmail.com">
+                        </div>
+                        <div class="input_category mt-3 ml-3">
+                            <img src="../images/icons/contact.png" alt="">
+                            <span>
+                                Chức vụ:
+                            </span>
+                            <input type="text" id="input_contact" class="form-control" value=" Giảng viên">
+                        </div>
+                        <div class="btn">
+                            <button class="btn-submit">
+                                LƯU
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <footer class=" text-center text-lg-start">
+                    <!-- Copyright -->
+                    <div class="text-center text-white p-3">
+                        © 2022 Copyright:
+                        <a class="text-white">TiDi</a>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
